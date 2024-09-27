@@ -106,7 +106,7 @@ const Main = () => {
             </div>
         </section>
         <section id="projects" className="project">
-            <div className="container reveal" style={{maxWidth:'100vw'}}>
+            <div className="container reveal" style={{maxWidth: '100vw'}}>
                 <h2 className="new-projects">Projects that could capture your interest:</h2>
                 <div className="container" style={{padding: 0, gap: 40, display: "flex", flexDirection: "column"}}>
                     <Project
@@ -157,13 +157,14 @@ const Main = () => {
                             d="M20.2 20.2l1.8 1.8"></path></svg></span>
                             <div className="contact__info"><h3>Location</h3><p>Lviv, Ukraine</p></div>
                         </div>
-                        <div className="contact__icon-box"><span><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                        <div className="contact__icon-box"><span><a style={{width:'100%',height:'100%',display:'flex',justifyContent:'center',alignItems:"center"}}  href="mailto:bozhovskiy18@gmail.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30"
                                                                       height="30" viewBox="0 0 24 24" fill="none"
                                                                       stroke="currentColor" strokeWidth="2"
                                                                       strokeLinecap="round" strokeLinejoin="round"
                                                                       className="tabler-icon tabler-icon-mail"><path
                             d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path
-                            d="M3 7l9 6l9 -6"></path></svg></span>
+                            d="M3 7l9 6l9 -6"></path></svg></a></span>
                             <div className="contact__info"><h3>Mail</h3><a
                                 href="mailto:bozhovskiy18@gmail.com">bozhovskiy18@gmail.com</a></div>
                         </div>
