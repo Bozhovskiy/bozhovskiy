@@ -1,0 +1,534 @@
+.institutionsModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 39;
+  border-right: 1px solid #dadce0;
+  background: #fff;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 0;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.institutionsModal__loader {
+  width: 685px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.institutionsModal::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 19px;
+  height: 10px;
+}
+
+.institutionsModal::-webkit-scrollbar-track {
+  background: #f3f2f8;
+  border-radius: 30px;
+}
+
+.institutionsModal::-webkit-scrollbar-thumb {
+  background: #6228d6;
+  border-radius: 30px;
+}
+
+.institutionsModal__top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.institutionsModal__top h1 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.institutionsModal__searchbar-filter,
+.institutionsModal__top-close {
+  cursor: pointer;
+}
+
+.institutionsModal__searchbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  background: #f3f2f8;
+  padding-right: 16px;
+  margin-top: 12px;
+  border-radius: 8px;
+  gap: 16px;
+
+  position: relative;
+}
+
+.institutionsModal-cards {
+  width: 100%;
+  display: grid;
+  margin: 32px auto 0 auto;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 24px;
+}
+
+.institutionsModal__inst {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.institutionsModal__inst-basket {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: calc(100% + 2 * 24px);
+  margin-left: calc(-1 * 24px);
+
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 100px;
+}
+
+.institutionsModal__inst-image {
+  border-radius: 16px;
+  width: 685px;
+  height: 330px;
+  position: relative;
+}
+
+.institutionsModal__inst-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+.institutionsModal__inst-image_close {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.institutionsModal__inst-name {
+  margin-top: 24px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.institutionsModal__inst-name h1 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+
+  max-width: calc(685px - 140px);
+  word-wrap: break-word;
+}
+
+.institutionsModal__inst-name_rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.institutionsModal__inst-name_rating h5 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.institutionsModal__inst-place {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 685px;
+  margin-top: 24px;
+}
+
+.institutionsModal__inst-place p {
+  color: #191c21;
+  font-family: var(--mont);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.institutionsModal__inst-tags {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.institutionsModal__inst-meals {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.institutionsModal__inst-time {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.institutionsModal__inst-time_table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 8px;
+  gap: 16px;
+}
+
+.institutionsModal__inst-time_table-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+  max-width: 324px;
+}
+
+.institutionsModal__inst-time_table-item p {
+  color: #191c21;
+
+  font-family: var(--mont-alter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.institutionsModal__inst-tags h2,
+.institutionsModal__inst-meals h2,
+.institutionsModal__inst-time h2 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.institutionsModal__inst-tags_items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  margin-top: 16px;
+  max-width: 662px;
+}
+
+.institutionsModal__inst-tags_items-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: fit-content;
+  gap: 10px;
+  border-radius: 4px;
+  background: #d6c2ff;
+  padding: 0 10px;
+}
+
+.institutionsModal__inst-tags_items-item p {
+  color: #191c21;
+  text-align: center;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.institutionsModal__inst-meals_loader {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.institutionsModal__inst-meals_cards {
+  width: 100%;
+  display: grid;
+  margin: 16px auto 0 auto;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 685px;
+  padding-bottom: 24px;
+}
+
+.institutionsModal__searchbar-filterBtn {
+  user-select: none;
+}
+
+.institutionsModal__filter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  padding-top: 16px;
+  margin-bottom: -16px;
+  height: fit-content;
+  flex-wrap: wrap-reverse;
+}
+
+.institutionsModal__filter-dropdown {
+  position: relative;
+  align-self: flex-end;
+}
+
+.institutionsModal__filter-dropdown_option {
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid #abb3c6;
+  background: #fff;
+  width: fit-content;
+  gap: 8px;
+
+  height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.institutionsModal__filter-dropdown_option p {
+  color: #191c21;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.institutionsModal__filter-dropdown_option-icon {
+  display: flex;
+  align-items: center;
+}
+
+.institutionsModal__filter-dropdown_option-icon.open {
+  transform: rotate(180deg);
+}
+
+.institutionsModal__filter-dropdown_menu {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border: 1px solid #abb3c6;
+  border-radius: 8px;
+  background: #fff;
+  gap: 16px;
+  width: 100%;
+  top: 48px;
+  position: absolute;
+}
+
+.institutionsModal__filter-dropdown_menu.rating {
+  padding: 0;
+  gap: 0;
+}
+
+.institutionsModal__filter-dropdown_menu_item.rating {
+  width: 100%;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.institutionsModal__filter-dropdown_menu_item.rating:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.institutionsModal__filter-dropdown_menu_item.rating:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.institutionsModal__filter-dropdown_menu_item.rating:hover {
+  background: #efe9fb;
+}
+
+.institutionsModal__filter-dropdown_menu_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.institutionsModal__filter-dropdown_menu_item p {
+  color: #000;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.no-results-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+
+.no-results-message h1 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+@media screen and (max-width: 1280px) {
+  .institutionsModal__loader {
+    width: 385px;
+  }
+  .institutionsModal-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .institutionsModal__inst-meals_cards {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 385px;
+  }
+  .institutionsModal__inst-image {
+    width: 385px;
+  }
+  .institutionsModal__inst-name h1 {
+    max-width: 385px;
+  }
+  .institutionsModal__inst-place {
+    max-width: 385px;
+  }
+  .institutionsModal__inst-tags_items {
+    max-width: 385px;
+  }
+  .institutionsModal__inst-name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  /* .institutionsModal__filter-dropdown_menu-instTypes {
+    right: 140px;
+    top: 55px;
+  } */
+}
+
+@media screen and (max-width: 768px) {
+  .institutionsModal__loader {
+    width: 100%;
+  }
+  .institutionsModal__top h1 {
+    font-size: 32px;
+  }
+
+  .institutionsModal__inst-meals {
+    margin-bottom: 60px;
+  }
+
+  .institutionsModal__inst-basket {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    height: 100px;
+  }
+
+  .institutionsModal {
+    width: 100%;
+  }
+  .institutionsModal-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .institutionsModal__inst-meals_cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+  }
+  .institutionsModal__inst-image {
+    width: 100%;
+  }
+  .institutionsModal__inst-name {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .institutionsModal__inst-tags_items {
+    max-width: none;
+  }
+  .institutionsModal__inst-name h1 {
+    max-width: calc(100% - 145px);
+  }
+  .institutionsModal__inst-place {
+    max-width: none;
+  }
+  /* .institutionsModal__filter-dropdown_menu-instTypes {
+    right: 189px;
+    top: 0;
+  } */
+}
+
+@media screen and (max-width: 440px) {
+  .institutionsModal {
+    padding: 24px 12px;
+  }
+  .institutionsModal-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .institutionsModal__inst-meals_cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .institutionsModal__inst-name {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .institutionsModal__inst-name h1 {
+    max-width: none;
+    overflow-wrap: break-word;
+  }
+  /* .institutionsModal__filter-dropdown_menu-instTypes {
+    right: 50px;
+    top: 55px;
+  } */
+}

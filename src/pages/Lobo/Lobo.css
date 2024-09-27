@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700&family=Montserrat:wght@400;500&family=Raleway:wght@700&display=swap');
+
+:root {
+  --mont: 'Montserrat', sans-serif;
+  --mont-alter: 'Montserrat Alternates', sans-serif;
+  --raleway: 'Raleway', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.bg {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url('./assets/bg.svg'),
+  radial-gradient(
+          61.83% 45.02% at 9.45% 90.51%,
+          rgba(255, 145, 77, 0.1) 0%,
+          rgba(255, 145, 77, 0) 100%
+  ),
+  radial-gradient(55.43% 39.5% at 75.87% 3.08%, #e9deff 0%, #f3f3f9 100%);
+  z-index: -10;
+  background-position: center;
+  background-size: cover;
+}
+
+.custom-checkbox {
+  all: unset;
+  border: 3px solid #6228d6;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-checkbox::before {
+  content: '';
+}
+
+.custom-checkbox:checked {
+  background: #6228d6;
+}
+
+.custom-checkbox:checked::after {
+  content: '✓';
+  color: #fff;
+  font-family: var(--mont);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.blur__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.institutions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: Calc(100vh - 100px);
+  max-height: Calc(100vh - 100px);
+  position: relative;
+  overflow: hidden;
+}
+
+.institutions__loader {
+  width: 100vw;
+  height: Calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.institutions-marker-label {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  display: flex;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  padding-left: 22px;
+  padding-bottom: 7px;
+}
+.institutions-marker-label-big {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 24px;
+  height: 24px;
+  font-style: normal;
+  font-weight: 600;
+  padding-top: 1px;
+}
+
+.institutions__openIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 0 8px 8px 0;
+  border: 1px solid #dadce0;
+  background: #fff;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+@media screen and (max-width: 1536px) {
+  .institutions,
+  .institutions__loader {
+    height: Calc(100vh - 80px);
+    max-height: Calc(100vh - 80px);
+  }
+}

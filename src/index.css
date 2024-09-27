@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --text-font: 'Mulish', sans-serif;
+  --title-font: 'Poppins', sans-serif;
+}
+
+* {
+  font-family: var(--title-font);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-style: normal;
+  scrollbar-width: thin;
+  scrollbar-color: #8e8e8e #ffffff;
+}
+
+p{
+  font-family: var(--text-font)!important;
+
+}
+
+svg{
+  cursor: pointer;
+}
+
+.container {
+  max-width: 75vw;
+  margin: 0 auto;
+  padding: 0 4rem;
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #8e8e8e;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #878787;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #8e8e8e;
+}

@@ -1,0 +1,189 @@
+/*------------ Filter ------------------*/
+.app__roadmaps-filter {
+    display: none;
+  }
+  
+  .app__roadmaps-filter.open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #282828;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .app__roadmaps-filter_container {
+    display: flex;
+    flex-direction: row;
+    margin: 35px 0;
+    gap: 24px;
+    width: 100%;
+  
+    padding: 0 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .app__roadmaps-filter_rating,
+  .app__roadmaps-filter_difficulty,
+  .app__roadmaps-filter_category,
+  .app__roadmaps-filter_time {
+    width: 100%;
+    max-width: 160px;
+    position: relative;
+    display: flex;
+  }
+  
+  .app__roadmaps-filter_rating button,
+  .app__roadmaps-filter_difficulty button,
+  .app__roadmaps-filter_category button,
+  .app__roadmaps-filter_time button {
+    all: unset;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  
+    background: #363636;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    height: 35px;
+  
+    width: 140px;
+    padding: 0 10px;
+  
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #ffffff;
+  }
+  
+  .app__roadmaps-filter_rating button.active,
+  .app__roadmaps-filter_difficulty button.active,
+  .app__roadmaps-filter_category button.active,
+  .app__roadmaps-filter_time button.active {
+    border: solid 1px transparent;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      linear-gradient(101deg, #78e4ff, #ff48fa);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #363636 inset;
+  }
+  
+  .app__roadmaps-filter_difficulty-dropdown,
+  .app__roadmaps-filter_rating-dropdown,
+  .app__roadmaps-filter_time-dropdown,
+  .app__roadmaps-filter_category-dropdown {
+    display: none;
+  }
+  
+  .app__roadmaps-filter_difficulty-dropdown.open,
+  .app__roadmaps-filter_rating-dropdown.open,
+  .app__roadmaps-filter_time-dropdown.open,
+  .app__roadmaps-filter_category-dropdown.open {
+    display: flex;
+    flex-direction: column;
+    background: #363636;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.168);
+    border-radius: 8px;
+  
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    margin-top: 45px;
+    max-width: 160px;
+    width: 100%;
+    z-index: 5;
+    user-select: none;
+  }
+  
+  .app__roadmaps-filter_difficulty-dropdown_wrapper,
+  .app__roadmaps-filter_rating-dropdown_wrapper,
+  .app__roadmaps-filter_time-dropdown_wrapper,
+  .app__roadmaps-filter_category-dropdown_wrapper {
+    cursor: pointer;
+  }
+  
+  .app__roadmaps-filter_difficulty-dropdown_wrapper:first-child,
+  .app__roadmaps-filter_rating-dropdown_wrapper:first-child,
+  .app__roadmaps-filter_time-dropdown_wrapper:first-child,
+  .app__roadmaps-filter_category-dropdown_wrapper:first-child {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  
+  .app__roadmaps-filter_difficulty-dropdown_wrapper:last-child,
+  .app__roadmaps-filter_rating-dropdown_wrapper:last-child,
+  .app__roadmaps-filter_time-dropdown_wrapper:last-child,
+  .app__roadmaps-filter_category-dropdown_wrapper:last-child {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .app__roadmaps-filter_difficulty-dropdown_wrapper:hover,
+  .app__roadmaps-filter_rating-dropdown_wrapper:hover,
+  .app__roadmaps-filter_time-dropdown_wrapper:hover,
+  .app__roadmaps-filter_category-dropdown_wrapper:hover {
+    background: #444444;
+  }
+  
+  .app__roadmaps-filter_difficulty-dropdown label,
+  .app__roadmaps-filter_rating-dropdown label,
+  .app__roadmaps-filter_time-dropdown label,
+  .app__roadmaps-filter_category-dropdown label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 10px;
+  }
+  
+  .app__roadmaps-filter_difficulty-dropdown_wrapper input[type="checkbox"],
+  .app__roadmaps-filter_rating-dropdown_wrapper input[type="checkbox"],
+  .app__roadmaps-filter_time-dropdown_wrapper input[type="checkbox"],
+  .app__roadmaps-filter_category-dropdown input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: rgba(21, 190, 139, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .app__roadmaps-filter_difficulty-dropdown_wrapper
+    input[type="checkbox"]:checked::before,
+  .app__roadmaps-filter_rating-dropdown_wrapper
+    input[type="checkbox"]:checked::before,
+  .app__roadmaps-filter_time-dropdown_wrapper
+    input[type="checkbox"]:checked::before,
+  .app__roadmaps-filter_category-dropdown_wrapper
+    input[type="checkbox"]:checked::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    background-image: url("../assets/Roadmaps/Galochka.svg");
+    background-position: calc(100% + 1px) center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  /* ------------------------------------ */

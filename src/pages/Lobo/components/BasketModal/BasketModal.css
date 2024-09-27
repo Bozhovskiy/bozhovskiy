@@ -1,0 +1,423 @@
+.basketmodal {
+  width: fit-content;
+  height: 563px;
+  border-radius: 16px;
+  background: #fff;
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+.basketmodal-closeicon {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  cursor: pointer;
+}
+
+.basketmodal__left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 2px solid #d7dceb;
+  padding-right: 16px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.basketmodal__left h3,
+.basketmodal__right h3 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.basketmodal__left-map {
+  width: 300px;
+  height: 200px;
+  min-height: 200px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.basketmodal__left-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.basketmodal__left-info div {
+  display: flex;
+  align-items: center;
+}
+
+.basketmodal__left-info p {
+  color: #191c21;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  flex-wrap: wrap;
+  max-width: 270px;
+}
+
+.basketmodal__left-info_custom-radio [type='radio']:checked,
+.basketmodal__left-info_custom-radio [type='radio']:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.basketmodal__left-info_custom-radio,
+[type='radio']:checked,
++ .basketmodal__left-info_custom-radio__label,
+.basketmodal__left-info_custom-radio,
+[type='radio']:not(:checked),
++ .basketmodal__left-info_custom-radio__label {
+  position: relative;
+  padding: 6px 0 0 38px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  user-select: none;
+}
+
+.basketmodal__left-info_custom-radio,
+[type='radio']:checked,
++ .basketmodal__left-info_custom-radio__label:before,
+.basketmodal__left-info_custom-radio,
+[type='radio']:not(:checked),
++ .basketmodal__left-info_custom-radio__label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #6228d6;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.basketmodal__left-info_custom-radio,
+[type='radio']:checked,
++ .basketmodal__left-info_custom-radio__label:after,
+.basketmodal__left-info_custom-radio,
+[type='radio']:not(:checked),
++ .basketmodal__left-info_custom-radio__label:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #6228d6;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 100%;
+  transition: all 0.1s ease;
+}
+
+.basketmodal__left-info_custom-radio,
+[type='radio']:not(:checked),
++ .basketmodal__left-info_custom-radio__label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.basketmodal__left-info_custom-radio,
+[type='radio']:checked,
++ .basketmodal__left-info_custom-radio__label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.basketmodal__left-info_custom-radio__label p {
+  color: #000;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.basketmodal__left-addCard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.basketmodal__left-addCard div {
+  display: flex;
+  align-items: center;
+}
+
+.basketmodal__left-addCard h4 {
+  color: #6228d6;
+  font-family: var(--raleway);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.basketmodal__right {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+}
+
+.basketmodal__right-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+  padding-right: 8px;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: fit-content;
+}
+
+.basketmodal__right-cards::-webkit-scrollbar,
+.basketmodal__left::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 19px;
+  height: 10px;
+}
+
+.basketmodal__right-cards::-webkit-scrollbar-track,
+.basketmodal__left::-webkit-scrollbar-track {
+  background: #f3f2f8;
+  border-radius: 30px;
+}
+
+.basketmodal__right-cards::-webkit-scrollbar-thumb,
+.basketmodal__left::-webkit-scrollbar-thumb {
+  background: #6228d6;
+  border-radius: 30px;
+}
+
+.basketmodal__right-card {
+  display: flex;
+  width: 322px;
+
+  border-radius: 8px;
+  background: #f3f2f8;
+  height: fit-content;
+}
+
+.basketmodal__right-card_image {
+  width: 84px;
+  height: 84px;
+  min-width: 84px;
+  margin: 4px;
+}
+
+.basketmodal__right-card_image-lobo {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: 100%;
+  background: #ff914d;
+  user-select: none;
+}
+
+.basketmodal__right-card_image-lobo h1 {
+  color: #fff;
+  text-align: center;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.basketmodal__right-card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.basketmodal__right-card_info {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px 12px 4px;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.basketmodal__right-card_info-top,
+.basketmodal__right-card_info-bottom {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.basketmodal__right-card_info-top p {
+  color: #191c21;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 180px;
+  white-space: nowrap;
+}
+
+.basketmodal__right-card_info-top h4 {
+  color: #191c21;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.basketmodal__right-card_info-bottom span {
+  color: #ff914d;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.basketmodal__right-card_info-bottom_button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background: #efe9fb;
+}
+
+.basketmodal__right-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.basketmodal__right-price_count {
+  color: #191c21;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.basketmodal__right-price_price {
+  color: #ff914d;
+  font-family: var(--mont-alter);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.basketmodal__left-addCard_fields {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.basketmodal__left-addCard_fields h5 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.basketmodal__left-addCard_fields-bottom {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.basketmodal__left-addCard_fields-bottom_item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .basketmodal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 24px 12px;
+  }
+  .basketmodal__left {
+    display: flex;
+    flex-direction: column;
+    border-right: none;
+    border-bottom: 2px solid #d7dceb;
+    overflow: unset;
+    padding-right: 0;
+  }
+  .basketmodal__left h3,
+  .basketmodal__right h3 {
+    font-size: 24px;
+  }
+  .basketmodal__left-map {
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+  }
+  .basketmodal__left-info p {
+    font-size: 16px;
+    max-width: none;
+  }
+  .basketmodal__left-addCard {
+    margin-bottom: 16px;
+  }
+  .basketmodal__right {
+    padding-left: 0;
+    margin-top: 16px;
+  }
+  .basketmodal__right-cards {
+    padding-right: 0;
+    overflow: unset;
+    height: 100%;
+    max-height: none;
+  }
+  .basketmodal__left-addCard_fields {
+    margin-bottom: 16px;
+  }
+
+  .basketmodal__right-card {
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .basketmodal__right-card_info-top p {
+    max-width: none;
+    width: fit-content;
+    white-space: wrap;
+    word-break: break-all;
+  }
+}

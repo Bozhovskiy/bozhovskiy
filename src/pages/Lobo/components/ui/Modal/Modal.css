@@ -1,0 +1,30 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #fff;
+  width: 100%;
+  height: max-content;
+  padding: 24px;
+  position: relative;
+}
+
+.modal__title {
+  color: #191c21;
+  text-align: center;
+
+  font-family: var(--mont-alter);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  z-index: 45;
+}

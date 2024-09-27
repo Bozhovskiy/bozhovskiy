@@ -1,0 +1,104 @@
+.institutionalCard {
+  min-width: 345px;
+  max-width: 345px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.institutionalCard:hover {
+  transition: 150ms;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.institutionalCard__image {
+  height: 166px;
+  user-select: none;
+  width: 100%;
+}
+
+.institutionalCard__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.institutionalCard__top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  margin-top: 8px;
+}
+
+.institutionalCard__top h4 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 260px;
+}
+
+.institutionalCard__top-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.institutionalCard__top-rating h5 {
+  color: #191c21;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.institutionalCard__bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 12px 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.institutionalCard__bottom p {
+  color: #191c21;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.institutionalCard__bottom-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .institutionalCard {
+    min-width: 0;
+  }
+  .institutionalCard__image {
+    max-width: none;
+  }
+}

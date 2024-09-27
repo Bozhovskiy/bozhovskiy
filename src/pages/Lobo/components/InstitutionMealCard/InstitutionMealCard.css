@@ -1,0 +1,153 @@
+.institutionMealCard {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 150ms;
+  width: 100%;
+  user-select: none;
+}
+
+.institutionMealCard:hover {
+  transition: 150ms;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.institutionMealCard__image {
+  width: 100%;
+  height: 160px;
+}
+
+.institutionMealCard__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.institutionMealCard__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 8px 16px 16px 16px;
+}
+
+.institutionMealCard__content h1 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+
+  max-width: 270px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.institutionMealCard__content-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.institutionMealCard__content-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.institutionMealCard__content-price s,
+.institutionMealCard__content-number p {
+  color: #696f7d;
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.institutionMealCard__content-price p {
+  color: #ff914d;
+  font-family: var(--mont);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.institutionMealCard__content-number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.institutionMealCard__content-number_buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.institutionMealCard__content-number_buttons_btn {
+  width: 32px;
+  height: 32px;
+  background: #efe9fb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.institutionMealCard__content-number_buttons h4 {
+  color: #191c21;
+  font-family: var(--mont-alter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  width: 12px;
+  text-align: center;
+}
+
+.institutionMealCard__image-lobo {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px 8px 0 0;
+  height: 160px;
+  background: #ff914d;
+}
+
+.institutionMealCard__image-lobo h1 {
+  color: #fff;
+  text-align: center;
+  font-family: var(--mont-alter);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.institutionMealCard__content-loboTags {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.institutionMealCard__content-loboTags p {
+  color: #191c21;
+
+  font-family: var(--mont);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
