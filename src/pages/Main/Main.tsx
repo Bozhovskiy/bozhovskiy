@@ -10,7 +10,6 @@ import ByneDocs from '../../assets/ByneDocs.jpeg'
 import Limnia from '../../assets/LimniaOld.jpg'
 import {Footer, Navbar, Project} from "../../components";
 import {useEffect} from "react";
-import useMobile from "../../hooks/useMobile.ts";
 
 const Main = () => {
     useEffect(() => {

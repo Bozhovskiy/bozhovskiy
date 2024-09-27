@@ -36,7 +36,8 @@ import Navbar from "./components/Navbar/Navbar.tsx";
 const Lobo = () => {
   const [dishs, setDishs] = useState<Dish[]>([]);
   const [isLoadingDishs, setIsLoadingDishs] = useState(false);
-  const institutions = [
+  //@ts-ignore
+  const institutions:Institution[] = [
           {
             "address_line": "123 Main St",
             "contact_phones": "+380123456789",
@@ -55,7 +56,7 @@ const Lobo = () => {
             "weekends_opening_hours": "09:00",
             "working_days_closing_hours": "22:00",
             "working_days_opening_hours": "10:00",
-            "dish_count": 3,
+            "dish_count": 4,
             "dishes": [{
               "is_lobobox": true,
               "id": 4,
@@ -366,7 +367,9 @@ const Lobo = () => {
     setTotalPrice(0);
     setIsLoadingDishs(true);
     if(institutions[index].dish_count>0){
-      setDishs(institutions[index].dishes);
+      if(institutions[index].dishes){
+        setDishs(institutions[index].dishes);
+      }
     }
     else{
       setDishs([]);

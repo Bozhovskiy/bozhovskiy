@@ -17,7 +17,7 @@ export interface Institution {
   working_days_closing_hours: string;
   working_days_opening_hours: string;
   dish_count: number;
-  dishes: Dish[];
+  dishes?: Dish[];
 }
 export interface Dish {
   name: string;
@@ -29,7 +29,7 @@ export interface Dish {
   institution_key: string;
   is_lobobox: boolean;
   original_price: number;
-  photo: string;
+  photo?: string;
   tags: string[];
 }
 export interface OrderOne {
@@ -49,8 +49,4 @@ export interface Order {
   order_key: string;
   address_line: string;
   data: OrderOne[];
-}
-export interface OrderData {
-  status_code: number;
-  data: Order[];
 }
