@@ -123,7 +123,7 @@ const Main = () => {
                     />
                     <Project
                         header="Limnia"
-                        text="Effortlessly build and deploy powerful LLM applications with a comprehensive suite of tools for creating custom solutions. With Retrieval-Augmented Generation (RAG), you can generate high-quality content based on your existing documents. Platform also enables your LLM to interact with external tools and data sources, allowing for seamless integration."
+                        text="Limnia offers a fresh perspective on fine jewelry, empowering modern women to express their unique style. Our customizable, modular designs, crafted from ethically sourced materials, allow you to create pieces that evolve with you. Whether you're building a collection or seeking a signature piece, Limnia's timeless aesthetic and commitment to sustainability make it the perfect choice for the conscious consumer."
                         imgSrc={Limnia}
                         url="https://limnia.com/"
                     />
