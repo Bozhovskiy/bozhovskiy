@@ -53,10 +53,16 @@
         font-weight: 400;
         line-height: normal;
     }
+
+    @media (max-width: 1440px) {
+        p {
+            font-size: 20px;
+        }
+    }
     @media screen and (max-width: 768px) {
         gap: 4px;
         padding: 16px;
-        p{
+        p {
             font-size: 16px;
         }
     }
@@ -66,9 +72,11 @@
     .project__card {
         flex-direction: column-reverse;
     }
-    .project__card__text{
+
+    .project__card__text {
         max-width: none;
     }
+
     .project__card__image {
         border-radius: 30px 30px 0 0;
         clip-path: none;

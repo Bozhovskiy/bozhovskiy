@@ -72,7 +72,13 @@
         color: #2d2e32;
         margin-bottom: 2rem;
         margin-top: 2rem;
-
+        @media (max-width: 1440px) {
+            font-size: 4rem;
+            img {
+                height: 4rem;
+                width: auto;
+            }
+        }
         @media (max-width: 758px) {
             font-size: 3rem;
             img {
@@ -171,8 +177,9 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: -100px;
+    bottom: -4rem;
     left: 0;
+
     @media (max-width: 992px) {
         position: initial;
         flex-direction: column;
@@ -184,7 +191,9 @@
         border-right: 2px solid rgb(45, 46, 50, 0.5);
         font-weight: 600;
         color: #2d2e32;
-
+        @media (max-width: 1650px) {
+            margin-right: 3rem;
+        }
         @media (max-width: 992px) {
             margin-right: 0;
             margin-bottom: 3rem;
@@ -194,13 +203,20 @@
             padding-bottom: 1rem;
         }
     }
-
     ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         gap: 3rem;
 
+        @media (max-width: 1650px) {
+            gap: 2rem;
+            flex-direction: row;
+        }
+        @media (max-width: 1260px) {
+            gap: 1rem;
+            flex-direction: row;
+        }
         @media (max-width: 992px) {
             justify-content: center;
         }
@@ -295,7 +311,10 @@
         right: 0;
         border-radius: 50%;
 
-
+        @media (max-width: 1440px) {
+            bottom: -4vw;
+            right: 4vw;
+        }
         @media (max-width: 1140px) {
             display: none;
         }
@@ -324,6 +343,10 @@
     width: 4vw !important;
     bottom: 1.25vw;
     right: 3vw;
+    @media (max-width: 1440px) {
+        bottom: -0.6vw;
+        right: 7vw;
+    }
     @media (max-width: 1140px) {
         display: none;
     }
@@ -570,6 +593,7 @@
             align-items: center;
             justify-content: center;
             height: 5rem;
+            min-width: 5rem;
             box-shadow: 0 0 10px rgb(0 0 0 / 10%);
             border-radius: 50%;
             color: #147efb;
